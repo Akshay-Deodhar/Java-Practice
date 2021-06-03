@@ -2,7 +2,7 @@ package org.javapractice.problems;
 
 /**
  * https://leetcode.com/problems/can-you-eat-your-favorite-candy-on-your-favorite-day/
- * 
+ * solved 03.06.2021
  * @author JJPL242-PC
  *
  */
