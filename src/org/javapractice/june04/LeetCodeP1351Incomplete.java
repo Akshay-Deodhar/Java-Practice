@@ -1,7 +1,7 @@
 package org.javapractice.june04;
 
 public class LeetCodeP1351Incomplete {
-    public int countNegatives(int[][] grid) {
+    public int oldWrongAnswerCountNegatives(int[][] grid) {
 	int count = 0;
 	boolean isCounted;
 	for (int[] row : grid) {
@@ -39,6 +39,19 @@ public class LeetCodeP1351Incomplete {
 		mid = lo + (hi - lo) / 2;
 		if (!isCounted)
 		    count += (row.length - mid);
+	    }
+	}
+	return count;
+    }
+
+    public int countNegatives(int[][] grid) {
+	int count = 0;
+	for (int i = grid.length - 1; i >= 0; i--) {
+	    for (int j = 0; j < grid[i].length; j++) {
+		if (grid[i][j] < 0) {
+		    count += (grid[i].length - j);
+		    break;
+		}
 	    }
 	}
 	return count;
