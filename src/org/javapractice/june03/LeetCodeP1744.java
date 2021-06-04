@@ -1,10 +1,8 @@
-package org.javapractice.problems;
+package org.javapractice.june03;
 
 /**
  * https://leetcode.com/problems/can-you-eat-your-favorite-candy-on-your-favorite-day/
- * solved 03.06.2021
- * @author JJPL242-PC
- *
+ * *
  */
 
 public class LeetCodeP1744 {
