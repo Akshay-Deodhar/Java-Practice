@@ -1,4 +1,4 @@
-package javapractice.year2021.month06.june12;
+package javapractice.year2021.month06.date12;
 
 import java.util.HashMap;
 import java.util.Map;
