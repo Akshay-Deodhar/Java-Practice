@@ -1,30 +1,12 @@
 package javapractice.year2021.month06.date12;
 
+import javapractice.utils.ListNode;
+
 /**
  * https://leetcode.com/problems/insertion-sort-list/
  */
 
 public class LeetCodeP0147 {
-	// public ListNode insertionSortList(ListNode head) {
-	// if(head == null | head.next == null) {
-	// return head;
-	// }
-	// List<Integer> list = new ArrayList<Integer>();
-	// ListNode temp = head;
-	// while(temp != null) {
-	// list.add(temp.val);
-	// temp = temp.next;
-	// }
-	// Collections.sort(list);
-	// temp = head;
-	// int i=0;
-	// while(temp!=null) {
-	// temp.val = list.get(i);
-	// i++;
-	// temp = temp.next;
-	// }
-	// return head;
-	// }
 
 	public ListNode insertionSortList(ListNode head) {
 		if (head == null | head.next == null) {
@@ -52,22 +34,5 @@ public class LeetCodeP0147 {
 			prev = curr;
 			curr = curr.next;
 		}
-	}
-}
-
-class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode() {
-	}
-
-	ListNode(int val) {
-		this.val = val;
-	}
-
-	ListNode(int val, ListNode next) {
-		this.val = val;
-		this.next = next;
 	}
 }

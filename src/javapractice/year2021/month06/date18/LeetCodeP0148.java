@@ -1,5 +1,7 @@
 package javapractice.year2021.month06.date18;
 
+import javapractice.utils.ListNode;
+
 /**
  * https://leetcode.com/problems/sort-list/
  */
@@ -62,11 +64,3 @@ public class LeetCodeP0148 {
         return true;
     }
 }
-
-class ListNode {
-     int val;
-     ListNode next;
-     ListNode() {}
-     ListNode(int val) { this.val = val; }
-     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- }
