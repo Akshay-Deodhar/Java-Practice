@@ -1,4 +1,4 @@
-package javapractice.year2021.month06.template;
+package javapractice.year2021.month07.template;
 
 //import java.util.*;
 
