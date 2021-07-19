@@ -7,13 +7,13 @@ import java.util.*;
  */
 
 public class LeetCodeP1218 {
-    public int longestSubsequence(int[] arr, int difference) {
-        Map<Integer, Integer> counts = new HashMap<> ();
-        int newCount;
-        for(int i:arr) {
-            newCount = 1 + counts.getOrDefault(i-difference, 0);
-            counts.put(i, newCount);
-        }
-        return Collections.max(counts.values());
-    }
+	public int longestSubsequence(int[] arr, int difference) {
+		Map<Integer, Integer> counts = new HashMap<>();
+		int newCount;
+		for (int i : arr) {
+			newCount = 1 + counts.getOrDefault(i - difference, 0);
+			counts.put(i, newCount);
+		}
+		return Collections.max(counts.values());
+	}
 }

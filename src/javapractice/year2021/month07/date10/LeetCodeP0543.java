@@ -9,25 +9,18 @@ import javapractice.utils.TreeNode;
  */
 
 public class LeetCodeP0543 {
-    public int diameterOfBinaryTree(TreeNode root) {
-        if(root==null) {
-            return 0;
-        }
-        return Math.max(
-            getTreeHeight(root.left) + getTreeHeight(root.right),
-            Math.max(
-                diameterOfBinaryTree(root.left),
-                diameterOfBinaryTree(root.right)
-            )
-        );
-    }
-    private int getTreeHeight(TreeNode root) {
-        if(root == null) {
-            return 0;
-        }
-        return 1 + Math.max(
-            getTreeHeight(root.left),
-            getTreeHeight(root.right)
-        );
-    }
+	public int diameterOfBinaryTree(TreeNode root) {
+		if (root == null) {
+			return 0;
+		}
+		return Math.max(getTreeHeight(root.left) + getTreeHeight(root.right),
+				Math.max(diameterOfBinaryTree(root.left), diameterOfBinaryTree(root.right)));
+	}
+
+	private int getTreeHeight(TreeNode root) {
+		if (root == null) {
+			return 0;
+		}
+		return 1 + Math.max(getTreeHeight(root.left), getTreeHeight(root.right));
+	}
 }

@@ -5,41 +5,41 @@ package javapractice.year2021.month06.date05;
  */
 
 public class LeetCodeP1658 {
-    // private HashMap<Integer, Integer> memo = new HashMap<Integer, Integer>();
-    public int minOperations(int[] nums, int x) {
-        int arrSum = 0;
-        for (int i : nums) {
-            arrSum += i;
-        }
-        if(arrSum < x) {
-            return -1;
-        }
-        if(arrSum == x) {
-            return nums.length;
-        }
-        int targetSum = arrSum - x;
-        int start = 0, end = 0;
-        int maxLen = -1_000_000;
-        int sum = 0;
-        while(end < nums.length) {
-            // System.out.println("Added " + nums[end]);
-            sum += nums[end];
-            // System.out.println("New sum " + sum);
-            end++;
-            while(sum > targetSum && start < end) {
-                // System.out.println("Subtracted " + nums[start]);
-                sum -= nums[start];
-                start++;
-                // System.out.println("New sum " + sum);
-            }
-            if(sum ==  targetSum) {
-                // System.out.println(maxLen + " funny " + (end - start + 1));
-                maxLen = Math.max(maxLen, end - start + 1);
-            }
-        }
-        return maxLen == -1_000_000 ? -1 : nums.length - maxLen + 1;
+	// private HashMap<Integer, Integer> memo = new HashMap<Integer, Integer>();
+	public int minOperations(int[] nums, int x) {
+		int arrSum = 0;
+		for (int i : nums) {
+			arrSum += i;
+		}
+		if (arrSum < x) {
+			return -1;
+		}
+		if (arrSum == x) {
+			return nums.length;
+		}
+		int targetSum = arrSum - x;
+		int start = 0, end = 0;
+		int maxLen = -1_000_000;
+		int sum = 0;
+		while (end < nums.length) {
+			// System.out.println("Added " + nums[end]);
+			sum += nums[end];
+			// System.out.println("New sum " + sum);
+			end++;
+			while (sum > targetSum && start < end) {
+				// System.out.println("Subtracted " + nums[start]);
+				sum -= nums[start];
+				start++;
+				// System.out.println("New sum " + sum);
+			}
+			if (sum == targetSum) {
+				// System.out.println(maxLen + " funny " + (end - start + 1));
+				maxLen = Math.max(maxLen, end - start + 1);
+			}
+		}
+		return maxLen == -1_000_000 ? -1 : nums.length - maxLen + 1;
 
-    }
+	}
 
 //     public int oldMinOperations(int[] nums, int x) {
 //         try {
@@ -51,7 +51,7 @@ public class LeetCodeP1658 {
 //                 return nums.length;
 //             }
 //             return operations(nums, 0, nums.length - 1, x);    
-            
+
 //         } finally {
 //             memo.clear();
 //         }

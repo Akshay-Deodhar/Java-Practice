@@ -7,36 +7,36 @@ import java.util.Arrays;
  */
 
 public class LeetCodeP0950 {
-    public int[] deckRevealedIncreasing(int[] deck) {
-        Arrays.sort(deck);
-        if(deck.length <= 2) {
-            return deck;
-        }
+	public int[] deckRevealedIncreasing(int[] deck) {
+		Arrays.sort(deck);
+		if (deck.length <= 2) {
+			return deck;
+		}
 
-        int len = deck.length;
-        int[] shuffledDeck = new int[len];
-        boolean isUsed[] = new boolean[len], skip = false;
-        int cIdx = 0, arrIdx = 0;
-        while(arrIdx < len) {
-            if(isUsed[cIdx]) {
-                cIdx = (cIdx+1)%len;
-            } else {
-                if(skip) {
-                    skip = false;
-                    cIdx = (cIdx+1)%len;
-                } else {
-                    isUsed[cIdx] = true;
-                    shuffledDeck[cIdx] = arrIdx;
-                    arrIdx++;
-                    skip = true;
-                    cIdx = (cIdx+1)%len;
-                }
-            }
-        }
-        for(int i=0;i<len;i++) {
-            shuffledDeck[i] = deck[shuffledDeck[i]];
-        }
-        return shuffledDeck;
-    }
+		int len = deck.length;
+		int[] shuffledDeck = new int[len];
+		boolean isUsed[] = new boolean[len], skip = false;
+		int cIdx = 0, arrIdx = 0;
+		while (arrIdx < len) {
+			if (isUsed[cIdx]) {
+				cIdx = (cIdx + 1) % len;
+			} else {
+				if (skip) {
+					skip = false;
+					cIdx = (cIdx + 1) % len;
+				} else {
+					isUsed[cIdx] = true;
+					shuffledDeck[cIdx] = arrIdx;
+					arrIdx++;
+					skip = true;
+					cIdx = (cIdx + 1) % len;
+				}
+			}
+		}
+		for (int i = 0; i < len; i++) {
+			shuffledDeck[i] = deck[shuffledDeck[i]];
+		}
+		return shuffledDeck;
+	}
 
 }

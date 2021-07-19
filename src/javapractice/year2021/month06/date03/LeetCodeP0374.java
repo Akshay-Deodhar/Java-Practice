@@ -4,24 +4,24 @@ package javapractice.year2021.month06.date03;
  * https://leetcode.com/problems/range-sum-query-mutable/
  */
 class LeetCodeP0374 {
-    class NumArray {
-	int[] values;
+	class NumArray {
+		int[] values;
 
-	public NumArray(int[] nums) {
-	    values = nums;
-	}
+		public NumArray(int[] nums) {
+			values = nums;
+		}
 
-	public void update(int i, int val) {
-	    values[i] = val;
-	}
+		public void update(int i, int val) {
+			values[i] = val;
+		}
 
-	public int sumRange(int i, int j) {
-	    int retVal = 0;
-	    for (int k = i; k <= j; k++)
-		retVal += values[k];
-	    return retVal;
+		public int sumRange(int i, int j) {
+			int retVal = 0;
+			for (int k = i; k <= j; k++)
+				retVal += values[k];
+			return retVal;
+		}
 	}
-    }
 }
 
 /**

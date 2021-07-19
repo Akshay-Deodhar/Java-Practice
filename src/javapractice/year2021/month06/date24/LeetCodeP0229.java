@@ -7,18 +7,18 @@ import java.util.*;
  */
 
 public class LeetCodeP0229 {
-    public List<Integer> majorityElement(int[] nums) {
-        List<Integer> result = new ArrayList<>();
-        int len = nums.length, threshold = len / 3;
-        Map<Integer, Integer> counts = new HashMap<>();
-        for(int i:nums) {
-            counts.put(i, counts.getOrDefault(i,0) + 1);
-        }
-        for(int i: counts.keySet()) {
-            if(counts.get(i) > threshold) {
-                result.add(i);
-            }
-        }
-        return result;
-    }
+	public List<Integer> majorityElement(int[] nums) {
+		List<Integer> result = new ArrayList<>();
+		int len = nums.length, threshold = len / 3;
+		Map<Integer, Integer> counts = new HashMap<>();
+		for (int i : nums) {
+			counts.put(i, counts.getOrDefault(i, 0) + 1);
+		}
+		for (int i : counts.keySet()) {
+			if (counts.get(i) > threshold) {
+				result.add(i);
+			}
+		}
+		return result;
+	}
 }

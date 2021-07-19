@@ -7,14 +7,14 @@ package javapractice.year2021.month07.date01;
  */
 
 public class LeetCodeP0122 {
-    public int maxProfit(int[] prices) {
-        int len = prices.length, profit = 0;
-        int i;
-        for (i=1;i<len;i++) {
-            if(prices[i-1]<prices[i]) {
-                profit += prices[i] - prices[i-1];
-            }
-        }
-        return profit;
-    }
+	public int maxProfit(int[] prices) {
+		int len = prices.length, profit = 0;
+		int i;
+		for (i = 1; i < len; i++) {
+			if (prices[i - 1] < prices[i]) {
+				profit += prices[i] - prices[i - 1];
+			}
+		}
+		return profit;
+	}
 }

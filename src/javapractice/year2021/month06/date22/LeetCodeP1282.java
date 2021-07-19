@@ -7,20 +7,20 @@ import java.util.*;
  */
 
 public class LeetCodeP1282 {
-    public List<List<Integer>> groupThePeople(int[] groupSizes) {
-        List<List<Integer>> groups = new ArrayList<>();
-        Map<Integer,List<Integer>> counts = new HashMap<>();
-        int len = groupSizes.length;
-        for(int i = 0; i < len; i++) {
-            if(!counts.containsKey(groupSizes[i])) {
-                counts.put(groupSizes[i], new ArrayList<Integer>());
-            }
-            counts.get(groupSizes[i]).add(i);
-            if(counts.get(groupSizes[i]).size() == groupSizes[i]) {
-                groups.add(counts.get(groupSizes[i]));
-                counts.put(groupSizes[i], new ArrayList<Integer>());
-            }
-        }
-        return groups;
-    }
+	public List<List<Integer>> groupThePeople(int[] groupSizes) {
+		List<List<Integer>> groups = new ArrayList<>();
+		Map<Integer, List<Integer>> counts = new HashMap<>();
+		int len = groupSizes.length;
+		for (int i = 0; i < len; i++) {
+			if (!counts.containsKey(groupSizes[i])) {
+				counts.put(groupSizes[i], new ArrayList<Integer>());
+			}
+			counts.get(groupSizes[i]).add(i);
+			if (counts.get(groupSizes[i]).size() == groupSizes[i]) {
+				groups.add(counts.get(groupSizes[i]));
+				counts.put(groupSizes[i], new ArrayList<Integer>());
+			}
+		}
+		return groups;
+	}
 }
