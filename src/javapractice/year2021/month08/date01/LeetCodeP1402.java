@@ -7,15 +7,15 @@ import java.util.*;
  */
 
 public class LeetCodeP1402 {
-    public int maxSatisfaction(int[] satisfaction) {
-        Arrays.sort(satisfaction);
-        int len = satisfaction.length, sum = 0, total = 0;
-        for(int i=len-1;i>=0;i--) {
-            if(total < total + sum + satisfaction[i]) {
-                sum += satisfaction[i];
-                total += sum;
-            }
-        }
-        return total;
-    }
+	public int maxSatisfaction(int[] satisfaction) {
+		Arrays.sort(satisfaction);
+		int len = satisfaction.length, sum = 0, total = 0;
+		for (int i = len - 1; i >= 0; i--) {
+			if (total < total + sum + satisfaction[i]) {
+				sum += satisfaction[i];
+				total += sum;
+			}
+		}
+		return total;
+	}
 }
